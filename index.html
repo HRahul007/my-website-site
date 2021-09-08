@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Movies Website</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/lightslider.css">
+        <!--js-------------->
+        <script src="js/JQuery3.3.1.js"></script>
+        <script src="js/lightslider.js"></script>
+<!--fav-icon---------->
+<link rel="shortcut icon" href="images/fav icon.png"/>
+<!--using fontawesome-------->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+
+    <body> 
+        <!--navigation---------->
+        <nav>
+            <!--logo---------->
+            <a href="#" class="logo">
+                <img src="images/logo.png"/>
+            </a>
+            <!--menu----------->
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">TV Shows</a></li>
+                <li><a href="#">Hollywood</a></li>
+                <li><a href="#">Horror</a></li>
+            </ul>
+            <!--search---------->
+            <div class="search">
+                <input type="text" placeholder="Find Your Fav Movie"/>
+                <!--search icon---------->
+                <i class="fas fa-search"></i>
+            </div>
+        </nav>
+        <section id="main">
+            <!--showcase------------->
+            <!--heading--------------->
+            <h1 class="Showcase-heading">  
+                Showcase
+            </h1>
+
+            <ul id="autoWidth" class="cs-hidden">
+                <!--box-1-------------->
+                <li class="item-a">
+                    <!--showcase-box------->
+                    <div class="showcase-box">
+                        <img src="images/s-1.jpg"/>
+                    </div>
+                </li>
+                <!--box-2-------------->
+                <li class="item-b">
+                    <!--showcase-box------->
+                    <div class="showcase-box">
+                        <img src="images/s-2.jpg"/>
+                    </div>
+                </li>
+                <!--box-3-------------->
+                <li class="item-c">
+                    <!--showcase-box------->
+                    <div class="showcase-box">
+                        <img src="images/s-3.jpg"/>
+                    </div>
+                </li>
+                <!--box-4-------------->
+                <li class="item-d">
+                    <!--showcase-box------->
+                    <div class="showcase-box">
+                        <img src="images/s-4.jpg"/>
+                    </div>
+                </li>
+                <!--box-5-------------->
+                <li class="item-e">
+                    <!--showcase-box------->
+                    <div class="showcase-box">
+                        <img src="images/s-5.png"/>
+                    </div>
+                </li>
+              </ul>
+
+        </section>
+        <!--lates movies-->
+        <section id="Latest">
+            <h2 class="Latest-Heading">Latest Movies</h2>
+            <!--slider--->
+            <ul id="autoWidth" class="cs-hidden">
+                <!--Slide-box-1-->
+                <li class="item-a">
+                    <div class="latest-box">
+                        <!--img-->
+                        <div class="latest-b-img">
+                            <img src="images/m-1.jpg">
+                        </div>
+                        <!--text-------->
+                        <div class="latest-b-text">
+                            <strong>Kin 2018</strong>
+                            <p>Action Movie</p>
+                        </div>
+                    </div>
+                </li>
+              </ul> 
+        </section>
+        <!--slider-script------------->
+        <script>
+              $(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        } 
+    });  
+  });
+        </script>
+    </body>
+</html>
